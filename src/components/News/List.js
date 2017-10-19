@@ -5,6 +5,9 @@ import {
     Link
 } from 'react-router-dom'
 
+/**
+ * 列表
+ */
 export default class List extends React.Component
 {
     //1。构造函数

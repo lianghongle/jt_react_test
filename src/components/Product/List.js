@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from "axios"
 
+/**
+ * 列表
+ */
 export default class List extends React.Component
 {
     //1。构造函数

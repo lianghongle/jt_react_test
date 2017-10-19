@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * 点赞
+ */
 export default class Agree extends React.Component
 {
     componentWillReceiveProps(nextProps)

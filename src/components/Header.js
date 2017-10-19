@@ -4,6 +4,9 @@ import logo from './../logo.svg';
 
 import Children from "./Children";
 
+/**
+ * 公用头部
+ */
 export default class Header extends React.Component
 {
     render()

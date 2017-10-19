@@ -4,6 +4,9 @@ import{
     Link
 } from 'react-router-dom'
 
+/**
+ * 菜单
+ */
 export default class Menu extends React.Component
 {
     render()

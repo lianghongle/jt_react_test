@@ -14,6 +14,9 @@ import ProductList from "./Product/List"
 import Login from "./User/Login"
 import Index from "./Index"
 
+/**
+ * 路由
+ */
 export default class MyRouter extends React.Component
 {
     render()

@@ -2,6 +2,9 @@ import React from 'react';
 import axios from "axios"
 import Agree from "./Agree"
 
+/**
+ * 详情
+ */
 export default class Detail extends React.Component
 {
     //1。构造函数
