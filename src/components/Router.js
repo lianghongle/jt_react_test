@@ -11,26 +11,29 @@ import NewsDetail from "./News/Detail"
 import NewsList from "./News/List"
 import ProductList from "./Product/List"
 
+import Login from "./User/Login"
+import Index from "./Index"
+
 export default class MyRouter extends React.Component
 {
     render()
     {
-        return  <Router>
+        return <Router>
             <div>
-                <ul>
-                    <li><Link to="/">首页</Link></li>
-                    <li><Link to="/news">新闻列表</Link></li>
-                    <li><Link to="/products">商品列表</Link></li>
-                </ul>
-
-                <hr/>
-
-                <Route exact path="/" component={NewsList}/>
+                <Route exact path="/" component={Index}/>
                 <Route exact path="/products" component={ProductList}/>
                 <Route exact path="/news" component={NewsList}/>
                 <Route exact path="/news/:index" component={NewsDetail}/>
+                <Route exact path="/login" component={Login}/>
             </div>
         </Router>
+
     }
 }
-//exact 地址path完全匹配
+/*
+exact 地址path完全匹配
+
+HashRouter:支持刷新
+BrowserRouter:h5方式
+
+*/

@@ -50,7 +50,7 @@ export default class List extends React.Component
 
         // console.log(this.state.list)
 
-        return <div>
+        return <div className="news-list">
             <h2>new list</h2>
 
             <span ref={(span)=>{this.loadingSpan = span}}>加载中。。。</span>
