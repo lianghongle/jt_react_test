@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {
-BrowserRouter as Router,
+HashRouter as Router,
+// BrowserRouter as Router,
 Route,
 Link
 } from 'react-router-dom'
@@ -27,7 +28,7 @@ export default class MyRouter extends React.Component
                 <Route exact path="/" component={NewsList}/>
                 <Route exact path="/products" component={ProductList}/>
                 <Route exact path="/news" component={NewsList}/>
-                <Route exact path="/news/:newsid" component={NewsDetail}/>
+                <Route exact path="/news/:index" component={NewsDetail}/>
             </div>
         </Router>
     }

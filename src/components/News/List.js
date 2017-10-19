@@ -48,7 +48,7 @@ export default class List extends React.Component
     {
         console.log("render")
 
-        console.log(this.state.list)
+        // console.log(this.state.list)
 
         return <div>
             <h2>new list</h2>
@@ -57,10 +57,9 @@ export default class List extends React.Component
 
             <ul>
             {this.state.list.map((item, index)=>{
-                console.log(item)
+                // console.log(item)
                 return <li key={index}>
-                    <Link to={"/news/"+index}></Link>
-                    {item.title}:{item.desc}
+                    <Link to={"/news/"+index}>{item.title}：{item.desc}</Link>
                 </li>
             })}
             </ul>

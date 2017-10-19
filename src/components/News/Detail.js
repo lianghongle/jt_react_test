@@ -25,7 +25,11 @@ export default class Detail extends React.Component
     //2.首次渲染前执行
     componentWillMount()
     {
-        axios.get("http://vm.centos.xmissy_local_yii2_api/test/detail")
+        axios.get("http://vm.centos.xmissy_local_yii2_api/test/detail",{
+            params: {
+                id : this.props.match.params.index
+            }
+        })
             .then((res)=>{
 
                 console.log(res)
@@ -44,6 +48,7 @@ export default class Detail extends React.Component
     render()
     {
         return <div>
+            <div>获取 id 参数：{this.props.match.params.index}</div>
             <div>标题：{this.state.detail.title}</div>
             <div>描述：{this.state.detail.desc}</div>
             <Agree agreeNum={this.state.agreeNum} />
