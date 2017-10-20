@@ -1,5 +1,7 @@
-import React from 'react';
-import axios from "axios"
+import React from 'react'
+// import axios from "axios"
+
+import Passport from './Passport'
 
 export default class Login extends React.Component
 {
@@ -39,7 +41,13 @@ export default class Login extends React.Component
 
             <div>
                 <button onClick={() => {
+                    // let passport = new Passport()
+                    let passport = this.props.passport == null ?
+                        new Passport() : this.props.passport;
 
+                    passport.login(this.state.userName, this.state.userPass, ()=>{
+                        this.props.history.push("/products");
+                    })
                 }
                 }>登录
                 </button>
@@ -52,7 +60,9 @@ export default class Login extends React.Component
     setUserInfo(event, key)
     {
         let obj = {};
-        obj[key] = event.target.value
+        obj[key] = event.target.value//（event.target）标签的值（.value）
         this.setState(obj);
+
+        console.log(this.state)
     }
 }
